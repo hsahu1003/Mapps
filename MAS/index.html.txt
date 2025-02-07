@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Cloner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>App Cloner</h1>
+    </header>
+    <main>
+        <section class="settings">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ur">Urdu</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="notifications">Notifications:</label>
+                <input type="checkbox" id="notifications" checked>
+            </div>
+        </section>
+
+        <section class="app-list">
+            <h2>Available Apps</h2>
+            <div class="app" id="google">
+                <h3>Google</h3>
+                <button onclick="cloneApp('Google')">Clone App</button>
+            </div>
+            <div class="app" id="facebook">
+                <h3>Facebook</h3>
+                <button onclick="cloneApp('Facebook')">Clone App</button>
+            </div>
+            <div class="app" id="messenger">
+                <h3>Messenger</h3>
+                <button onclick="cloneApp('Messenger')">Clone App</button>
+            </div>
+        </section>
+
+        <section class="cloned-apps">
+            <h2>Cloned Apps</h2>
+            <div id="clonedAppsContainer"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 App Cloner. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

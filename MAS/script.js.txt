@@ -1,0 +1,35 @@
+// script.js
+
+function cloneApp(appId) {
+    const clonedAppsContainer = document.getElementById('clonedAppsContainer');
+
+    // Create a new div for the cloned app
+    const clonedApp = document.createElement('div');
+    clonedApp.className = 'cloned-app';
+    clonedApp.innerHTML = `
+        ${appId}
+        <button onclick="uninstallApp(this)">Uninstall</button>
+    `;
+
+    // Append the cloned app to the container
+    clonedAppsContainer.appendChild(clonedApp);
+}
+
+function uninstallApp(button) {
+    const clonedApp = button.parentElement;
+    clonedApp.remove();
+}
+
+// Event listener for language selection
+const languageSelector = document.getElementById('language');
+languageSelector.addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+    alert(`Language changed to: ${selectedLanguage}`);
+});
+
+// Event listener for notification toggle
+const notificationToggle = document.getElementById('notifications');
+notificationToggle.addEventListener('change', (event) => {
+    const isEnabled = event.target.checked;
+    alert(`Notifications ${isEnabled ? 'enabled' : 'disabled'}`);
+});
